@@ -12,7 +12,13 @@ from nomad.datamodel.data import (
     Schema,
 )
 from nomad.datamodel.metainfo.annotations import ELNAnnotation, ELNComponentEnum
-from nomad.metainfo import Datetime, Quantity, SchemaPackage, SubSection
+from nomad.metainfo import (
+    Datetime,
+    Quantity,
+    SchemaPackage,
+    Section,
+    SubSection,
+)
 from structlog.stdlib import (
     BoundLogger,
 )
@@ -120,7 +126,8 @@ class CPFSPreparationContactingStep(CPFSPreparationStep):
         super().normalize(archive, logger)
 
 
-class CPFSPreparationLog(Schema):
+class twodquantummateriallog(Schema):
+    m_def = Section(label='2dquantummaterial')
     name = Quantity(
         type=str, a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity)
     )
