@@ -17,7 +17,7 @@ name = "cpfs-preparation-log"
 description = "Sushmitas sample preparation"
 version = "0.1.0"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
     { name = "Jonathan Noky", email = "jonathan.noky@cpfs.mpg.de" },
 ]
